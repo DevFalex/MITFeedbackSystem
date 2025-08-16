@@ -34,7 +34,7 @@ const AssignFeedbackModal: React.FC<AssignFeedbackModalProps> = ({
       if (!role) return;
       try {
         const token = localStorage.getItem('token');
-        const res = await fetch(`/api/users/role/${role}`, {
+        const res = await fetch(`https://mitfeedbacksystem.onrender.com/api/users/role/${role}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (!res.ok) throw new Error('Failed to load users for selected role');
@@ -53,7 +53,7 @@ const AssignFeedbackModal: React.FC<AssignFeedbackModalProps> = ({
 
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch(`/api/feedback/${feedback._id}/assign`, {
+      const res = await fetch(`https://mitfeedbacksystem.onrender.com/api/feedback/${feedback._id}/assign`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
