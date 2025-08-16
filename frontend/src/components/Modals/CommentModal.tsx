@@ -25,7 +25,7 @@ const CommentModal: React.FC<CommentModalProps> = ({
     try {
       setLoading(true);
       const token = localStorage.getItem('token');
-      const res = await fetch(`/api/feedback/${feedback._id}/comments`, {
+      const res = await fetch(`https://mitfeedbacksystem.onrender.com/api/feedback/${feedback._id}/comments`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
