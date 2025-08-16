@@ -38,7 +38,7 @@ const SignIn: React.FC = () => {
     setLoading(true);
     try {
       const res = await axios.post<LoginResponse>(
-        'http://localhost:5000/api/auth/login',
+        'https://mitfeedbacksystem.onrender.com/api/auth/login',
         { email, password },
       );
       setAuth(res.data.token, res.data.user);
