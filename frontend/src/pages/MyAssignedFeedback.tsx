@@ -25,7 +25,7 @@ const MyAssignedFeedback: React.FC = () => {
   const fetchAssignedFeedback = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch('/api/feedback/assigned/me', {
+      const res = await fetch('https://mitfeedbacksystem.onrender.com/api/feedback/assigned/me', {
         headers: { Authorization: `Bearer ${token}` },
       });
 
