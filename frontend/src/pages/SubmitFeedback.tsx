@@ -42,7 +42,7 @@ const SubmitFeedback: React.FC = () => {
       payload.append('isAnonymous', String(isAnonymous)); // NEW
       if (attachment) payload.append('attachment', attachment);
 
-      const res = await fetch('/api/feedback', {
+      const res = await fetch('https://mitfeedbacksystem.onrender.com/api/feedback', {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${token}`,
