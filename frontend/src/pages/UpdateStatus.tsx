@@ -10,7 +10,7 @@ const UpdateStatus: React.FC = () => {
   const handleUpdate = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch(`/api/feedback/${id}/status`, {
+      const res = await fetch(`https://mitfeedbacksystem.onrender.com/api/feedback/${id}/status`, {
         method: 'PUT',
         headers: {
           Authorization: `Bearer ${token}`,
