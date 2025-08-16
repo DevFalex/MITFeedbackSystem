@@ -37,7 +37,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
       if (token) {
         try {
           const res = await axios.get<UserType>(
-            'http://localhost:5000/api/users/me',
+            'https://mitfeedbacksystem.onrender.com/api/users/me',
             {
               headers: { Authorization: `Bearer ${token}` },
             },
