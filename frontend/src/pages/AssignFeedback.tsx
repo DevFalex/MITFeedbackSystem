@@ -15,7 +15,7 @@ const AssignFeedback: React.FC = () => {
   const fetchLecturers = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch('/api/users/lecturers', {
+      const res = await fetch('https://mitfeedbacksystem.onrender.com/api/users/lecturers', {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (!res.ok) throw new Error('Failed to fetch lecturers');
@@ -29,7 +29,7 @@ const AssignFeedback: React.FC = () => {
   const handleAssign = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch(`/api/feedback/${id}/assign`, {
+      const res = await fetch(`https://mitfeedbacksystem.onrender.com/api/feedback/${id}/assign`, {
         method: 'PUT',
         headers: {
           Authorization: `Bearer ${token}`,
