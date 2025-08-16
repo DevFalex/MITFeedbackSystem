@@ -28,7 +28,7 @@ const DeleteConfirmModal: React.FC<DeleteConfirmModalProps> = ({
     setLoading(true);
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch(`/api/feedback/${feedback._id}`, {
+      const res = await fetch(`https://mitfeedbacksystem.onrender.com/api/feedback/${feedback._id}`, {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` },
       });
