@@ -38,7 +38,7 @@ const EditFeedbackModal: React.FC<EditFeedbackModalProps> = ({
       formData.append('category', category);
       if (file) formData.append('attachment', file);
 
-      const res = await fetch(`/api/feedback/${feedback._id}`, {
+      const res = await fetch(`https://mitfeedbacksystem.onrender.com/api/feedback/${feedback._id}`, {
         method: 'PUT',
         headers: { Authorization: `Bearer ${token}` },
         body: formData,
