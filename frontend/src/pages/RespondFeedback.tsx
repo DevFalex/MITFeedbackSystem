@@ -10,7 +10,7 @@ const RespondFeedback: React.FC = () => {
   const handleSubmit = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch(`/api/feedback/${id}/comments`, {
+      const res = await fetch(`https://mitfeedbacksystem.onrender.com/api/feedback/${id}/comments`, {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${token}`,
