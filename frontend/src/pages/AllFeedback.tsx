@@ -43,7 +43,7 @@ const AllFeedback: React.FC = () => {
   const fetchAllFeedback = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch('/api/feedback/allfeeds', {
+      const res = await fetch('https://mitfeedbacksystem.onrender.com/api/feedback/allfeeds', {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (!res.ok) throw new Error('Failed to fetch feedbacks');
