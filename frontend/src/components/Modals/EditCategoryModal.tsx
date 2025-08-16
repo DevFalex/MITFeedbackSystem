@@ -31,7 +31,7 @@ const EditCategoryModal: React.FC<EditCategoryModalProps> = ({
     try {
       setLoading(true);
       const token = localStorage.getItem('token');
-      const res = await fetch(`/api/feedback/${feedback._id}/category`, {
+      const res = await fetch(`https://mitfeedbacksystem.onrender.com/api/feedback/${feedback._id}/category`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
