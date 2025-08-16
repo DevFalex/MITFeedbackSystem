@@ -27,7 +27,7 @@ const UpdateStatusModal: React.FC<Props> = ({
     try {
       setLoading(true);
       const token = localStorage.getItem('token');
-      const res = await fetch(`/api/feedback/${feedback._id}/status`, {
+      const res = await fetch(`https://mitfeedbacksystem.onrender.com/api/feedback/${feedback._id}/status`, {
         method: 'PUT',
         headers: {
           Authorization: `Bearer ${token}`,
