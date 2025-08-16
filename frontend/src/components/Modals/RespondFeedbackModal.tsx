@@ -27,7 +27,7 @@ const RespondFeedbackModal: React.FC<Props> = ({
     try {
       setLoading(true);
       const token = localStorage.getItem('token');
-      const res = await fetch(`/api/feedback/${feedback._id}/comment`, {
+      const res = await fetch(`https://mitfeedbacksystem.onrender.com/api/feedback/${feedback._id}/comment`, {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${token}`,
