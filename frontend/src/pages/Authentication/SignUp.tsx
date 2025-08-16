@@ -46,7 +46,7 @@ const SignUp: React.FC = () => {
     setLoading(true);
     try {
       const res = await axios.post<RegisterResponse>(
-        'http://localhost:5000/api/auth/register',
+        'https://mitfeedbacksystem.onrender.com/api/auth/register',
         {
           username,
           email,
